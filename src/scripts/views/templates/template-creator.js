@@ -13,25 +13,25 @@ const createRestaurantDetailTemplate = (restaurant) => `
       <h4>Food Menus</h4>
       <ul>
         ${restaurant.menus && restaurant.menus.foods && restaurant.menus.foods.length > 0
-          ? restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('')
-          : '<li>No foods available</li>'}
+    ? restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('')
+    : '<li>No foods available</li>'}
       </ul>
       <h4>Drink Menus</h4>
       <ul>
         ${restaurant.menus && restaurant.menus.drinks && restaurant.menus.drinks.length > 0
-          ? restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')
-          : '<li>No drinks available</li>'}
+    ? restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')
+    : '<li>No drinks available</li>'}
       </ul>
       <h4>Customer Reviews</h4>
       <ul class="customerReviews">
         ${restaurant.customerReviews && restaurant.customerReviews.length > 0
-          ? restaurant.customerReviews.map((review) => `
+    ? restaurant.customerReviews.map((review) => `
             <li>
               <p>${review.name || 'Anonymous'}</p>
               <p>${review.review || 'No review available'}</p>
               <p>${review.date || 'Date not available'}</p>
             </li>`).join('')
-          : '<li>No reviews available</li>'}
+    : '<li>No reviews available</li>'}
       </ul>
     </div>
   </div>
