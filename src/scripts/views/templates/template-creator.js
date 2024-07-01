@@ -26,11 +26,11 @@ const createRestaurantDetailTemplate = (restaurant) => `
       <ul class="customerReviews">
         ${restaurant.customerReviews && restaurant.customerReviews.length > 0
           ? restaurant.customerReviews.map((review) => `
-              <li>
-                <p>${review.name || 'Anonymous'}</p>
-                <p>${review.review || 'No review available'}</p>
-                <p>${review.date || 'Date not available'}</p>
-              </li>`).join('')
+            <li>
+              <p>${review.name || 'Anonymous'}</p>
+              <p>${review.review || 'No review available'}</p>
+              <p>${review.date || 'Date not available'}</p>
+            </li>`).join('')
           : '<li>No reviews available</li>'}
       </ul>
     </div>
@@ -41,7 +41,7 @@ const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <h2>${restaurant.name}</h2>
     <img src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name} image">
-    <p>${restaurant.description ? restaurant.description.substring(0, 100) + '...' : 'Description not available'}</p>
+    <p>${restaurant.description ? `${restaurant.description.substring(0, 100)}...` : 'Description not available'}</p>
     <p>Kota: ${restaurant.city || 'City not available'}</p>
     <p>Rating: ${restaurant.rating || 'Not rated'}</p>
     <a href="/#/detail/${restaurant.id}" class="detail-link">View Details</a>
