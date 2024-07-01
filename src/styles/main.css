@@ -79,7 +79,7 @@ header {
   width: 100%;
   height: 60vh;
   position: relative;
-  background-image: url('../public/images/heros/hero-image_1.jpg');
+  background-image: url('../public/images/heros/hero-image_1-large.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -307,6 +307,10 @@ button#favoriteButton {
       min-width: 44px;
       min-height: 44px;
     }
+
+    .hero {
+      background-image: url('../public/images/heros/hero-image_1-large.jpg');
+    }
   }
   
   @media screen and (max-width: 600px) {
@@ -342,5 +346,8 @@ button#favoriteButton {
       min-width: 44px;
       min-height: 44px;
     }
+
+    .hero {
+      background-image: url('../public/images/heros/hero-image_1-small.jpg');
+    }
   }
-  
